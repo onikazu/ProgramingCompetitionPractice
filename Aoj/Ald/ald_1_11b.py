@@ -1,20 +1,20 @@
 n = int(input())
-l = [list(map(int, input().split())) for _ in range(n)]
+graph = [[]]
 
-for i in range(len(l)):
-    if len(l[i]) == 2:
-        l[i] = []
+for _ in range(n):
+    info = map(int, input().split())
+    if info[1] == 0:
+        graph.append([])
     else:
-        l[i] = l[i][2:]
+        graph.append(info[2:])
+        
+d_l = [-1] * (n+1)
+f_l = [-1] * (n+1)
+time = 0
 
-d = [0] * n
-f = [0] * n
+def dfs(v):
+    if not v:
+        return
 
-d[0] = 1
-
-stack = [0]
-
-while stack:
-    check
 
 
